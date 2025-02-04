@@ -1,1 +1,17 @@
+on:
+  push:
+    branches:
+      -master # O usa 'master' si esa es la rama princcipal en tu repo
+
+jobs:
+  run:
+    runs-on:self-hosted
+    steps:
+    -name:Check out repository 
+      uses:actions/checkout@v3
+
+      -name:Imprimir hola mundo
+      run: sy code test
+      env:
+      SNYK_TOKEN: ${{secrets.SNYK_TOKEN}}.
 
